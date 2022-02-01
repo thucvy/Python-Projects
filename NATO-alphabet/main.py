@@ -2,7 +2,7 @@ import pandas
 
 #TODO 1. Create a dictionary in this format:
 # {"A": "Alfa", "B": "Bravo"}
-df = pandas.read_csv("../NATO-alphabet-start/nato_phonetic_alphabet.csv")
+df = pandas.read_csv("nato_phonetic_alphabet.csv")
 letter_dict = {row.letter: row.code for (index, row) in df.iterrows()}
 # print(letter_dict)
 
