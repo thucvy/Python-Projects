@@ -1,5 +1,6 @@
-my_email = "lysoju21@gmail.com"
-password = "zzthui821"
+# FILL YOUR OWN EMAIL AND PASSWORD (GMAIL)
+my_email = "****"
+password = "****"
 
 
 import datetime as dt, smtplib, os, random, pandas as pd, re
