@@ -1,9 +1,9 @@
-# FILL YOUR OWN EMAIL AND PASSWORD (GMAIL)
-my_email = "****"
-password = "****"
-
-
 import datetime as dt, smtplib, os, random, pandas as pd, re
+import os
+
+my_email = os.environ.get("email")
+password = os.environ.get("password")
+
 
 now = dt.datetime.now()
 today = (now.month, now.day)
