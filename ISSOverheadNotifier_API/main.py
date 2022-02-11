@@ -7,9 +7,9 @@ import time
 my_email = "****"
 password = "****"
 
-
-MY_LAT = 51.507351 # Your latitude
-MY_LONG = -0.127758 # Your longitude
+# Got from https://www.latlong.net/ for Toronto, Canada
+MY_LAT = 43.653225
+MY_LONG = -79.383186
 
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
