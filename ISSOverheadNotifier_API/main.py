@@ -2,10 +2,10 @@ import requests
 import smtplib
 from datetime import datetime
 import time
+import os
 
-# FILL YOUR OWN EMAIL AND PASSWORD (GMAIL)
-my_email = "****"
-password = "****"
+my_email = os.environ.get("email")
+password = os.environ.get("password")
 
 # Got from https://www.latlong.net/ for Toronto, Canada
 MY_LAT = 43.653225
@@ -45,6 +45,6 @@ while True:
                 connection.login(user=my_email, password=password)
                 connection.sendmail(
                     from_addr=my_email,
-                    to_addrs="lysoju21@yahoo.com",
+                    to_addrs= os.environ.get("to_email"),
                     msg="Subject: ISS Overhead\n\nHey! The ISS is above you in the sky. Look up to see it yourself!"
                 )
