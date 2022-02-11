@@ -1,11 +1,12 @@
 import requests
 from twilio.rest import Client
 
-MY_LAT = 42.44
-MY_LONG = 96.22
-MY_API_KEY = '0fe0d301f9523cb832dc93c1c6fadcd4'
-account_sid = 'AC0fafa1e06487238da818973251f606ee'
-auth_token = '7517aa6511c3c6c6c1bae3946d68e097'
+
+MY_LAT = 43.653225
+MY_LONG = -79.383186
+MY_API_KEY = 'MY_OWM_API_KEY'
+account_sid = 'MY_TWILIO_ACCOUNT_SID'
+auth_token = 'MY_TWILIO_AUTH_TOKEN'
 
 parameters = {
     "lat": MY_LAT,
@@ -33,7 +34,7 @@ if is_rain:
     message = client.messages \
         .create(
             body = "It's going to rain within the next 12 hours. You should definitely bring an umbrella before heading out if you don't want to become a wet monkey 🦧💦",
-            from_='+18456979659',
-            to='+12676214004'
+            from_='PHONE_NUMBER_FROM_TWILIO',
+            to='TARGETED_PHONE_NUMBER'
     )
     print(message.status)
